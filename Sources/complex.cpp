@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "complex.h"
 
-using std::cout; using std::ostream;
+using std::cout; using std::ostream;using std::istream;
 
 complex conjugate(const complex& a)
 {
@@ -47,6 +47,12 @@ ostream& operator<<(ostream& out, const complex& a)
 	else
 		out << a.re << " - " << abs(a.im) << "i";
 	return out;
+}
+
+istream& operator>>(istream& in, complex& a)
+{
+	in >> a.re >> a.im;
+	return in;
 }
 
 bool operator==(const complex& a, const complex& b)

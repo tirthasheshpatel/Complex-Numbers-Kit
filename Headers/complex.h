@@ -19,6 +19,7 @@ public:
 	friend bool operator==(const complex&, const complex&);
 	friend bool operator!=(const complex&, const complex&);
 	friend std::ostream& operator<<(std::ostream&, const complex&);
+	friend std::istream& operator>>(std::istream&, complex&);
 public:
 	double mod() const { return sqrt(re*re + im*im); }
 	complex conjugate() const { return complex(re, -im); }

@@ -6,9 +6,9 @@ using std::cout; using std::cin; using std::endl;
 
 int main(int argc, char* argv[])
 {
-	double b, angle, c;
-	cin >> b >> c;
-	complex a(b, c);
+	double angle;
+	complex a;
+	cin >> a;
 	complex d = 1 / a;
 	double arg_rad = a.arg();
 	double arg_deg = arg_rad * (180/M_PI);
