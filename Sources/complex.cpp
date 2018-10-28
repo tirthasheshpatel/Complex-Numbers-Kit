@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "complex.h"
 #include <iomanip>
 constexpr auto M_PI = 3.14159265358979323846264338327950288419716939937510;
