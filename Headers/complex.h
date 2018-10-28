@@ -14,6 +14,8 @@ public:
 	friend complex operator-(const complex&, const complex&);
 	friend complex operator*(const complex&, const complex&);
 	friend complex operator/(const complex&, const complex&);
+	friend complex operator*=(const complex&, const complex&);
+	friend complex operator+=(const complex&, const complex&);
 	friend bool operator<(const complex&, const complex&);
 	friend bool operator>(const complex&, const complex&);
 	friend bool operator==(const complex&, const complex&);
@@ -23,8 +25,10 @@ public:
 public:
 	double mod() const { return sqrt(re*re + im*im); }
 	complex conjugate() const { return complex(re, -im); }
-	double arg() { return atan(im / re); }
+	double arg();
 	void rotate(double);
+	std::pair<complex, complex> complex_sqrt();
+	complex complex_log();
 public:
 	double re, im;
 };
