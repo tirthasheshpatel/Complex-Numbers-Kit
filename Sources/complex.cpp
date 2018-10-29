@@ -103,7 +103,7 @@ pair<complex, complex> complex::complex_sqrt()
 	pair<complex, complex> sr;
 	sr.first.re = sqrt((mod() + re) / 2);
 	sr.first.im = sqrt((mod() - re) / 2);
-	if (sr.first.im < 0) { sr.first.im = -sr.first.im; }
+	if (im < 0) { sr.first.im = -sr.first.im; }
 	sr.second.re = -sr.first.re;
 	sr.second.im = -sr.first.im;
 	return sr;
